@@ -43,7 +43,7 @@ function createUser(name, age)
 
         getInfoUser: function()
         {
-            console.log(`User name -> ${name}\nUser age -> ${age}\nUser balance -> ${balance}`);
+            console.log(`\nUser name -> ${name}\nUser age -> ${age}\nUser balance -> ${balance}`);
         }
     }
 }
