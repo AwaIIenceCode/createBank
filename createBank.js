@@ -29,8 +29,8 @@ function createUser(name, age)
         {
             if (amount > balance)
                 {
-                    console.log("You can`t withrdraw more, than you have, try again...");
-                    return;
+                    console.log("You can`t withrdraw more, than you have, try again");
+                    return this.withdraw(amount);
                 }
 
             return balance -= amount;
@@ -48,7 +48,19 @@ function createUser(name, age)
     }
 }
 
+// function for check user input
+function enterUserAmount(message)
+{
+    let userAmount = Number(prompt(message));
 
+    if (isNaN(message) || userAmount <= 0)
+    {
+        console.log("Enter the correct sum! Try again")
+        return enterUserAmount(message);
+    }
+
+    return userAmount;
+}
 
 //main function for compiling the code 
 function main()
