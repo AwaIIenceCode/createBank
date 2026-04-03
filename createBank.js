@@ -122,7 +122,7 @@ function main()
             
             case 3:
                 {
-                    user_1.getBalanceUser();
+                    console.log(user_1.getBalanceUser());
                     break;
                 }
 
