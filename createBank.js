@@ -100,7 +100,7 @@ function main()
 
     while(true)
     {
-        console.log("Press \"1\" for deposit your balance\nPress \"2\" for withdraw your balance\nPress \"3\" for check your balance\PPress \"4\" for check your info\nPress \"5\" for exit");
+        console.log("Press \"1\" for deposit your balance\nPress \"2\" for withdraw your balance\nPress \"3\" for check your balance\nPress \"4\" for check your info\nPress \"5\" for exit");
 
         let userChoice = Number(prompt("Enter your choice -> "));
 
