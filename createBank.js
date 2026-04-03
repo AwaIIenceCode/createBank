@@ -122,7 +122,7 @@ function main()
             
             case 3:
                 {
-                    console.log(user_1.getBalanceUser());
+                    console.log(`${userName}In your deposit ${user_1.getBalanceUser()} $`);
                     break;
                 }
 
