@@ -51,7 +51,7 @@ function createUser(name, age)
 // function for check user input
 function enterUserAmount()
 {
-    let userAmount = Number(prompt("Enter the sum ->"));
+    let userAmount = Number(prompt("\nEnter the sum ->"));
 
     if (isNaN(userAmount) || userAmount <= 0)
     {
@@ -65,7 +65,7 @@ function enterUserAmount()
 // function for check user age
 function enterUserAge()
 {
-    let userAge = Number(prompt("Enter your age -> "));
+    let userAge = Number(prompt("\nEnter your age -> "));
 
     if (isNaN(userAge) || userAge < 18)
     {
@@ -79,7 +79,7 @@ function enterUserAge()
 // function for check user name
 function enterUserName()
 {
-    let userName = prompt("Enter your name -> ");
+    let userName = prompt("\nEnter your name -> ");
 
     if (!userName || userName.trim().length < 2)
     {
@@ -100,9 +100,9 @@ function main()
 
     while(true)
     {
-        console.log("Press \"1\" for deposit your balance\nPress \"2\" for withdraw your balance\nPress \"3\" for check your balance\nPress \"4\" for check your info\nPress \"5\" for exit");
+        console.log("\nPress \"1\" for deposit your balance\nPress \"2\" for withdraw your balance\nPress \"3\" for check your balance\nPress \"4\" for check your info\nPress \"5\" for exit");
 
-        let userChoice = Number(prompt("Enter your choice -> "));
+        let userChoice = Number(prompt("\nEnter your choice -> "));
 
         switch(userChoice)
         {
