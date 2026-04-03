@@ -30,7 +30,7 @@ function createUser(name, age)
             if (userAmount > balance)
                 {
                     console.log("You can`t withrdraw more, than you have, try again");
-                    return this.withdraw(userAmount);
+                    return;
                 }
 
             return balance -= userAmount;
