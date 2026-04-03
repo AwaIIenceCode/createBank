@@ -51,7 +51,7 @@ function createUser(name, age)
 // function for check user input
 function enterUserAmount()
 {
-    let userAmount = Number(prompt("Enter the sum ->"));
+    let userAmount = Number(prompt("Enter the sum -> "));
 
     if (isNaN(userAmount) || userAmount <= 0)
     {
@@ -108,15 +108,15 @@ function main()
         {
             case 1:
                 {
-                    enterUserAmount();
-                    user_1.deposit(userAmount);
+                    let amount = enterUserAmount();
+                    user_1.deposit(amount);
                     break;
                 }
 
             case 2:
                 {
-                    enterUserAmount();
-                    user_1.withdraw(userAmount);
+                    let amount = enterUserAmount();
+                    user_1.withdraw(amount);
                     break;
                 }
             
