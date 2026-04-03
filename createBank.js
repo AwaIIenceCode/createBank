@@ -10,19 +10,9 @@ function createUser(name, age)
         name: name,
         age: age,
 
-        getName: function()
-        {
-            return name;
-        },
-
-        getAge: function()
-        {
-            return age;
-        },
-
         deposit: function(userAmount)
         {
-            return balance += userAmount;
+            balance += userAmount;
         },
 
         withdraw: function(userAmount)
@@ -33,15 +23,15 @@ function createUser(name, age)
                     return;
                 }
 
-            return balance -= userAmount;
+            balance -= userAmount;
         },
 
-        getBalanceUser: function()
+        getBalance: function()
         {
             return balance;
         },
 
-        getInfoUser: function()
+        getInfo: function()
         {
             console.log(`\nUser name -> ${name}\nUser age -> ${age}\nUser balance -> ${balance}`);
         }
@@ -110,6 +100,9 @@ function main()
                 {
                     let amount = enterUserAmount();
                     user_1.deposit(amount);
+
+                    console.log(`Your balance: ${user_1.getBalance()} $`);
+
                     break;
                 }
 
@@ -117,18 +110,21 @@ function main()
                 {
                     let amount = enterUserAmount();
                     user_1.withdraw(amount);
+
+                    console.log(`Your balance: ${user_1.getBalance()} $`);
+
                     break;
                 }
             
             case 3:
                 {
-                    console.log(`\n${userName}, In your deposit -> ${user_1.getBalanceUser()} $`);
+                    console.log(`\n${userName}, In your deposit -> ${user_1.getBalance()} $`);
                     break;
                 }
 
             case 4:
                 {
-                    user_1.getInfoUser();
+                    user_1.getInfo();
                     break;
                 }
             
