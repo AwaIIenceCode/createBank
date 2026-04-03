@@ -20,20 +20,20 @@ function createUser(name, age)
             return age;
         },
 
-        deposit: function(amount)
+        deposit: function(userAmount)
         {
-            return balance += amount;
+            return balance += userAmount;
         },
 
-        withdraw: function(amount)
+        withdraw: function(userAmount)
         {
-            if (amount > balance)
+            if (userAmount > balance)
                 {
                     console.log("You can`t withrdraw more, than you have, try again");
-                    return this.withdraw(amount);
+                    return this.withdraw(userAmount);
                 }
 
-            return balance -= amount;
+            return balance -= userAmount;
         },
 
         getBalanceUser: function()
@@ -51,7 +51,7 @@ function createUser(name, age)
 // function for check user input
 function enterUserAmount()
 {
-    let userAmount = Number(prompt("\nEnter the sum ->"));
+    let userAmount = Number(prompt("Enter the sum ->"));
 
     if (isNaN(userAmount) || userAmount <= 0)
     {
@@ -65,7 +65,7 @@ function enterUserAmount()
 // function for check user age
 function enterUserAge()
 {
-    let userAge = Number(prompt("\nEnter your age -> "));
+    let userAge = Number(prompt("Enter your age -> "));
 
     if (isNaN(userAge) || userAge < 18)
     {
@@ -79,7 +79,7 @@ function enterUserAge()
 // function for check user name
 function enterUserName()
 {
-    let userName = prompt("\nEnter your name -> ");
+    let userName = prompt("Enter your name -> ");
 
     if (!userName || userName.trim().length < 2)
     {
