@@ -1,22 +1,21 @@
 const prompt = require("prompt-sync")();
 
-//function for
-function createUser(name, age, deposit, withdraw)
+//create objects for bank`s users
+function createUser(name, age)
 {
     let balance = 0;
 
     return {
+
         name: name,
         age: age,
-        deposit: deposit,
-        withdraw: withdraw,
 
-        name: function()
+        getName: function()
         {
             return name;
         },
 
-        age: function()
+        getAge: function()
         {
             return age;
         },
@@ -28,6 +27,12 @@ function createUser(name, age, deposit, withdraw)
 
         withdraw: function(amount)
         {
+            if (amount > balance)
+                {
+                    console.log("You can`t withrdraw more, than you have, try again...");
+                    return;
+                }
+
             return balance -= amount;
         },
 
@@ -38,17 +43,17 @@ function createUser(name, age, deposit, withdraw)
 
         getInfoUser: function()
         {
-            console.log(`User name -> ${this.name}\nUser age -> ${this.age}\nUser balance -> ${this.balance}`);
+            console.log(`User name -> ${name}\nUser age -> ${age}\nUser balance -> ${balance}`);
         }
     }
-    
 }
 
 
-//main function for for compiling the code 
+
+//main function for compiling the code 
 function main()
 {
-
+    
 }
 
 main();
