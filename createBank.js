@@ -62,6 +62,18 @@ function enterUserAmount(message)
     return userAmount;
 }
 
+// function for check user age
+function enterUserAge(userAge)
+{
+    if (isNaN(userAge) || userAge < 18)
+    {
+        console.log("You can`t use this app, if you are under 18");
+        return enterUserAge(userAge);
+    }
+
+    return userAge;
+}
+
 //main function for compiling the code 
 function main()
 {
