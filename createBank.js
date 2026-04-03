@@ -63,15 +63,31 @@ function enterUserAmount(message)
 }
 
 // function for check user age
-function enterUserAge(userAge)
+function enterUserAge()
 {
+    let userAge = Number(prompt("Enter your age -> "));
+
     if (isNaN(userAge) || userAge < 18)
     {
         console.log("You can`t use this app, if you are under 18");
-        return enterUserAge(userAge);
+        return enterUserAge();
     }
 
     return userAge;
+}
+
+// function for check user name
+function enterUserName()
+{
+    let userName = prompt("Enter your name -> ");
+
+    if (!userName || userName.trim().length < 2)
+    {
+        console.log("Name can`t be less than 2 symbols, try again");
+        return enterUserName();
+    }
+
+    return userName;
 }
 
 //main function for compiling the code 
