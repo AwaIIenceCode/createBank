@@ -53,10 +53,10 @@ function enterUserAmount()
 {
     let userAmount = Number(prompt("Enter the sum ->"));
 
-    if (isNaN(message) || userAmount <= 0)
+    if (isNaN(userAmount) || userAmount <= 0)
     {
         console.log("Enter the correct sum! Try again")
-        return enterUserAmount(message);
+        return enterUserAmount();
     }
 
     return userAmount;
@@ -122,7 +122,7 @@ function main()
             
             case 3:
                 {
-                    console.log(`${userName}, In your deposit -> ${user_1.getBalanceUser()} $`);
+                    console.log(`\n${userName}, In your deposit -> ${user_1.getBalanceUser()} $`);
                     break;
                 }
 
