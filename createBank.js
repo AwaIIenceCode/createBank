@@ -108,33 +108,40 @@ function main()
         {
             case 1:
                 {
+                    enterUserAmount(message);
+                    user_1.deposit(userAmount);
                     break;
                 }
 
             case 2:
                 {
+                    enterUserAmount(message);
+                    user_1.withdraw(userAmount);
                     break;
                 }
             
             case 3:
                 {
+                    user_1.getBalanceUser();
                     break;
                 }
 
             case 4:
                 {
+                    user_1.getInfoUser();
                     break;
                 }
             
             case 5:
                 {
-                    break;
+                    console.log("Exit the program...");
+                    return;
                 }
 
             default:
                 {
                     console.log("There is no such answer option");
-                    return;
+                    continue;
                 }
 
         }
