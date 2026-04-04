@@ -118,7 +118,7 @@ function main()
             
             case 3:
                 {
-                    console.log(`\n${userName}, In your deposit -> ${user_1.getBalance()} $`);
+                    console.log(`\n${user_1.name}, In your deposit -> ${user_1.getBalance()} $`);
                     break;
                 }
 
